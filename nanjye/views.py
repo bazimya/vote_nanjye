@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from .forms import ProfileForm
-from .models import product,image
+from .models import product,image,welcomeimages
 
 def index(request):
    user= product.objects.all()
-   return render(request, 'index.html',{'user':user})
+   imgWelcome =welcomeimages.objects.all()
+
+   return render(request, 'index.html',{'user':user,'imgWelcome':imgWelcome})
 def search_results(request ):
 
     if 'article' in request.GET and request.GET["product"]:

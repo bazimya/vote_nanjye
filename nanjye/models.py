@@ -41,8 +41,10 @@ class  buyer(models.Model):
 
 class  welcomeimages(models.Model):
     Tittle = models.CharField(max_length=30)
-    publish_image=models.FileField(upload_to='images/', null=True)
+    publish_image_for_present=models.FileField(upload_to='images/', null=True)
     small1_banar=models.FileField(upload_to='images/', null=True)
     small2_banar=models.FileField(upload_to='images/', null=True)
     small3_banar=models.FileField(upload_to='images/', null=True)
     small4_banar=models.FileField(upload_to='images/', null=True)
+    small5_banar=models.FileField(upload_to='images/', null=True)
+    small6_banar=models.FileField(upload_to='images/', null=True)
